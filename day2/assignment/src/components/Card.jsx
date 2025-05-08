@@ -1,21 +1,12 @@
-import React from "react";
+import "./Card.css";
 
-function Card({ children }) {
+function Card({ user }) {
     return (
-        <div
-            style={{
-                border: "1px solid #ddd",
-                borderRadius: "10px",
-                width: "300px",
-                margin: "15px auto",
-                padding: "20px",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                backgroundColor: "#fff",
-                fontFamily: "Arial, sans-serif",
-                fontSize: "16px",
-            }}
-        >
-            {children}
+        <div className="card">
+            <h2>{user.name}</h2>
+            <p>Age: {user.age}</p>
+            <p>Location: {user.location}</p>
+            <p>Status: {user.age < 18 ? "Minor" : "Adult"}</p>
         </div>
     );
 }

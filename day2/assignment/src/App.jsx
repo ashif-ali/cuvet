@@ -1,4 +1,5 @@
 import UserList from "./components/UserList";
+import "./App.css";
 
 function App() {
     const userData = [
@@ -17,22 +18,16 @@ function App() {
             age: 28,
             location: "London, UK",
         },
+        {
+            name: "John Smith",
+            age: 88,
+            location: "London, UK",
+        },
     ];
 
     return (
         <div>
-            <h1
-                style={{
-                    textAlign: "center",
-                    fontFamily: "Arial, sans-serif",
-                    fontSize: "24px",
-                    color: "#333",
-                    margin: "20px 0",
-                    padding: "10px",
-                }}
-            >
-                User Data
-            </h1>
+            <h1 className="user-data-title">User Data</h1>
             <UserList userData={userData} />
         </div>
     );
